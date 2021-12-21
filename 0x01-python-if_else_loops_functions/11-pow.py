@@ -11,7 +11,10 @@ def pow(a, b):
         return d
     else:
         c = 1
-        d = 1
+        if a < 0:
+            d = -1
+        else:
+            d = 1
         while c <= -b:
             d /= a
             c += 1
