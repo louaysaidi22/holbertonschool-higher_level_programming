@@ -3,7 +3,7 @@ if __name__ == "__main__":
     from sys import argv
     p = len(argv)
     if p == 1:
-        print("0 ")
+        print("0")
     elif p == 2:
         print(argv[1])
     else:
