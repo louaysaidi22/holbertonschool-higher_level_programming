@@ -1,0 +1,90 @@
+The ``0-add_integer.py`` module
+======================
+
+Using ``add_integer``
+-------------------
+Import ``add_integer`` from the 0-add_integer`` module:
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Test with no arguments:
+
+    >>> add_integer()
+    Traceback (most recent call last):
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Test with one argument(integer):
+
+    >>> add_integer(3)
+    101
+
+Test with one argument(float):
+
+    >>> add_integer(5.8)
+    103
+
+Test with two arguments(integers):
+
+    >>> add_integer(5, 7)
+    12
+
+Test with two arguments(floats):
+
+    >>> add_integer(7.2, 5.7)
+    12
+
+Test with two arguments(integer and float):
+
+    >>> add_integer(0.5, 1)
+    1
+
+    >>> add_integer(2, 3.8)
+    5
+
+Test with two arguments(negative):
+
+    >>> add_integer(-7, 8)
+    1
+
+    >>> add_integer(2, -3)
+    -1
+
+    >>> add_integer(-8, -3)
+    -11
+
+    >>> add_integer(-0.5, 10)
+    10
+
+    >>> add_integer(2, -10.8)
+    -8
+
+    >>> add_integer(-8.8, -15.8)
+    -23
+
+Test with one argument(different from integer and float):
+
+    >>> add_integer("test")
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    >>> add_integer([0, 1])
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+Test with two arguments(one of them different from integer and float):
+
+    >>> add_integer("test", 1)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    >>> add_integer(7,"test")
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+    >>> add_integer("test", 7.5)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    >>> add_integer(75.2,"test")
+    Traceback (most recent call last):
+    TypeError: b must be an integer
