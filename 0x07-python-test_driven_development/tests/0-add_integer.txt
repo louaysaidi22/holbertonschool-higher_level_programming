@@ -71,6 +71,12 @@ Test with one argument(different from integer and float):
     Traceback (most recent call last):
     TypeError: a must be an integer
 
+Test with two arguments(float overflow):
+
+    >>> add_integer(float('inf'), 1)
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
+
 Test with two arguments(one of them different from integer and float):
 
     >>> add_integer("test", 1)
