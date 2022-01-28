@@ -77,6 +77,12 @@ Test with two arguments(float overflow):
     Traceback (most recent call last):
     OverflowError: cannot convert float infinity to integer
 
+Test with two arguments(float NaN):
+
+    >>> add_integer(float('NaN'), 1)
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
+
 Test with two arguments(one of them different from integer and float):
 
     >>> add_integer("test", 1)
