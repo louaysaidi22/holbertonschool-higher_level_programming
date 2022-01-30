@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""task1"""
+"""task2"""
 
 
 def say_my_name(first_name, last_name=""):
