@@ -7,7 +7,11 @@ def text_indentation(text):
     after each of these characters: ., ? and :"""
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-    for i in text:
-        print("{}".format(i), end="")
-        if i == "." or i == "?" or i == ":":
+    i = 0
+    while i < len(text):
+        print(text[i], end="")
+        if text[i] in ".:?":
+            while text[i+1] == " ":
+                i += 1
             print("\n")
+        i += 1
