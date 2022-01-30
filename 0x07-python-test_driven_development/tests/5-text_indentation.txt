@@ -1,0 +1,20 @@
+The ``5-text_indentation.py`` module
+======================
+
+Using ``text_indentation``
+-------------------
+Import ``text_indentation`` from the 5-text_indentation`` module:
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Test with no argument:
+
+    >>> text_indentation()
+    Traceback (most recent call last):
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+Test text is not string:
+
+    >>> text_indentation(5)
+    Traceback (most recent call last):
+    TypeError: text must be a string
