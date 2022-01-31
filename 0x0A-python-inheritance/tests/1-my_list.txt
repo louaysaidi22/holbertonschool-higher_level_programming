@@ -58,6 +58,7 @@ Test list:
     [-7, -5, -3, -2, -1]
 
 Test list(strings):
+
     >>> my_list = MyList()
     >>> my_list.append("dd")
     >>> my_list.append("ssc")
@@ -68,3 +69,16 @@ Test list(strings):
     ['dd', 'ssc', 'sd', 'ds', 'd']
     >>> my_list.print_sorted()
     ['d', 'dd', 'ds', 'sd', 'ssc']
+
+Test list(integers and strings):
+    >>> my_list = MyList()
+    >>> my_list.append("dd")
+    >>> my_list.append(2)
+    >>> my_list.append("sd")
+    >>> my_list.append(11)
+    >>> my_list.append(0)
+    >>> print(my_list)
+    ['dd', 2, 'sd', 11, 0]
+    >>> my_list.print_sorted()
+    Traceback (most recent call last):
+    TypeError: '<' not supported between instances of 'int' and 'str'
