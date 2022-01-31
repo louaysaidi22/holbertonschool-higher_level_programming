@@ -1,0 +1,33 @@
+The "7-base_geometry.py" module
+======================
+
+Using "BaseGeometry"
+-------------------
+Import "BaseGeometry" from the "7-base_geometry" module:
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Using "integer_validator"
+-------------------
+Import "integer_validator" from the "7-base_geometry" module:
+
+    >>> integer_validator = __import__('7-base_geometry').BaseGeometry.integer_validator
+
+test value not integer:
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("louay","saidi")
+    Traceback (most recent call last):
+    TypeError: louay must be an integer
+
+test value <= 0:
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("louay",0)
+    Traceback (most recent call last):
+    ValueError: louay must be greater than 0
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("louay",-22)
+    Traceback (most recent call last):
+    ValueError: louay must be greater than 0
