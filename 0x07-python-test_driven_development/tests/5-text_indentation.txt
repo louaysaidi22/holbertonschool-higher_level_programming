@@ -13,8 +13,21 @@ Test with no argument:
     Traceback (most recent call last):
     TypeError: text_indentation() missing 1 required positional argument: 'text'
 
-Test text is not string:
+Test text is not a string:
 
     >>> text_indentation(5)
     Traceback (most recent call last):
     TypeError: text must be a string
+
+Test text is a string:
+
+    >>> text_indentation("Hello")
+    Hello
+
+Test text is a string with blankline:
+
+    >>> text_indentation("Hello? . ")
+    Hello?
+    <BLANKLINE>
+    .
+    <BLANKLINE>
