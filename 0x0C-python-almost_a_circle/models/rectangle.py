@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """rectangle class"""
+from cmath import atan
 from models.base import Base
 
 
@@ -88,6 +89,23 @@ class Rectangle(Base):
                 for j in range(self.width):
                     print("#", end="")
                 print("")
+
+    def update(self, *args):
+        """ public method that assigns an argument to each attribute"""
+        if len(args) != 0:
+            i = 1
+            for arg in args:
+                if i == 1:
+                    self.id = arg
+                elif i == 2:
+                    self.width = arg
+                elif i == 3:
+                    self.height = arg
+                elif i == 4:
+                    self.x = arg
+                elif i == 5:
+                    self.y = arg
+                i += 1
 
     def __str__(self):
         """overriding the __str__ method"""
