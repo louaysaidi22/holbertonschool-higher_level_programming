@@ -123,7 +123,7 @@ class Rectangle(Base):
         dic = {
             "id": self.id,
             "width": self.width,
-            "hgeight": self.height,
+            "height": self.height,
             "x": self.x,
             "y": self.y
         }
