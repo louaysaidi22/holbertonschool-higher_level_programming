@@ -90,7 +90,7 @@ class Rectangle(Base):
                     print("#", end="")
                 print("")
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ public method that assigns an argument to each attribute"""
         if len(args) != 0:
             i = 1
@@ -106,6 +106,17 @@ class Rectangle(Base):
                 elif i == 5:
                     self.y = arg
                 i += 1
+        else:
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+            if "width" in kwargs:
+                self.width = kwargs["width"]
+            if "height" in kwargs:
+                self.height = kwargs["height"]
+            if "x" in kwargs:
+                self.x = kwargs["x"]
+            if "y" in kwargs:
+                self.y = kwargs["y"]
 
     def __str__(self):
         """overriding the __str__ method"""
