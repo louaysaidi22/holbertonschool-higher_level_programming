@@ -5,6 +5,7 @@ from models.base import Base
 
 class Rectangle(Base):
     """Class that inherits from Base"""
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """initialization of rectangle class"""
         super().__init__(id)
@@ -80,3 +81,9 @@ class Rectangle(Base):
             for j in range(self.width):
                 print("#", end="")
             print("")
+
+    def __str__(self):
+        """overriding the __str__ method"""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x,
+                                                       self.y, self.width,
+                                                       self.height)
