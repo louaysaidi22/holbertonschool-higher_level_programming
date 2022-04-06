@@ -7,7 +7,7 @@ if (process.argv[2] === undefined || process.argv.length === 3) {
   if (secondbig > big) {
     [big, secondbig] = [secondbig, big];
   }
-  for (let i = 0; i < process.argv.length; i++) {
+  for (let i = 4; i < process.argv.length; i++) {
     if (parseInt(process.argv[i]) > secondbig) {
       if (parseInt(process.argv[i]) > big) {
         secondbig = big;
